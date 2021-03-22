@@ -13,7 +13,6 @@ googleAnalytics = ""     # Google 统计 id
 pygmentsStyle = "b2"
 pygmentsCodeFences = true
 pygmentsCodeFencesGuessSyntax = true
-#disqusShortname = "yourdiscussshortname"
 pluralizelisttitles = false
 
 FootnoteReturnLinkContents = "↑"
@@ -36,11 +35,12 @@ FootnoteReturnLinkContents = "↑"
   tag = "tags"
   series = "series"
 
+# 主页内容
 [params]
     author = "7.seven"
-    info1 = "Just for Fun"
-    info2 = "Learner"
-    info3 = ""
+    avatarurl = "images/avatar.jpg"
+    subtitle = "HALO HALO" 
+
     description = ""
     keywords = ""
 
@@ -55,11 +55,6 @@ FootnoteReturnLinkContents = "↑"
     hidecredits = true
     hidecopyright = false
 
-    math = true
-    #custom_css = ["/css/main.css"]
-    #custom_js = ["/js/lazysizes.min.js", "/js/flying-pages.min.js", "/js/custom.js"]
-
-    dateFormat = "2020-11-22"
     series = true
     rtl = false
 
@@ -72,6 +67,8 @@ FootnoteReturnLinkContents = "↑"
 
     # Series see also post count
     maxSeeAlsoItems = 3
+
+    dateFormat = "2008-01-02"
 
 # Comments on github issue
 [params.utteranc]
@@ -115,5 +112,5 @@ FootnoteReturnLinkContents = "↑"
 
   [[menu.main]]
     name = "About"
-    url = "/about.md"
+    url = "/about/"
     weight = 4
