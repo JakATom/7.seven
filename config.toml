@@ -24,7 +24,7 @@ FootnoteReturnLinkContents = "↑"
 # 用于 Hugo 输出文档的设置
 [outputs]
   page     = ["HTML", "AMP"]
-  home     = ["HTML", "RSS"]
+  home     = ["HTML", "AMP"]
   section  = ["HTML"]
   taxonomyTerm = ["HTML"]
   taxonomy = ["HTML"]
@@ -66,9 +66,9 @@ FootnoteReturnLinkContents = "↑"
     colorscheme = "auto"
 
     # Series see also post count
-    maxSeeAlsoItems = 3
+    #maxSeeAlsoItems = 3
 
-    dateFormat = "2008-01-02"
+    #dateFormat = "2008-01-02"
 
 # Comments on github issue
 [params.utteranc]
