@@ -1,191 +1,119 @@
-baseURL = "http://www.example.com"
-title = "johndoe"
-theme = "hugo-coder"
-languageCode = "en"
-defaultContentLanguage = "en"
-paginate = 20
+baseURL = "https://blog.7seven.xyz"  # <head> 里面的 baseurl 信息，填你的博客地址
+title = "小琪気的博客"     # 浏览器的标题
+theme = "hugo-coder"     # 主题 (需要自己下载)
+languagecode = "zh-cn"   # 语言
+defaultcontentlanguage = "zh-cn"
+
+paginate = 9999          # 每页的文章数
+enableEmoji = true       # 支持 Emoji
+enableRobotsTXT = true   # 支持 robots.txt
+canonifyURLs = true      #  启用将相对URL转换为绝对URL
+googleAnalytics = ""     # Google 统计 id
+
 pygmentsStyle = "b2"
 pygmentsCodeFences = true
 pygmentsCodeFencesGuessSyntax = true
-disqusShortname = "yourdiscussshortname"
+#disqusShortname = "yourdiscussshortname"
+pluralizelisttitles = false
+
+FootnoteReturnLinkContents = "↑"
+
+# 是否在文档中直接使用 HTML 标签
+[markup.goldmark.renderer]
+    unsafe= true
+
+# 用于 Hugo 输出文档的设置
+[outputs]
+  page     = ["HTML", "AMP"]
+  home     = ["HTML", "RSS"]
+  section  = ["HTML"]
+  taxonomyTerm = ["HTML"]
+  taxonomy = ["HTML"]
+
+# 自定义分类
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"
 
 [params]
-author = "John Doe"
-description = "John Doe's personal website"
-keywords = "blog,developer,personal"
-info = "Full Stack DevOps and Magician"
-avatarURL = "images/avatar.jpg"
-#gravatar = "john.doe@example.com"
-footerContent = "Enter a text here."
-dateFormat = "January 2, 2006"
-hideFooter = false
-hideCredits = false
-hideCopyright = false
-since = 2019
-# Git Commit in Footer, uncomment the line below to enable it.
-commit = "https://github.com/luizdepra/hugo-coder/tree/"
-rtl = false
-# Specify light/dark colorscheme
-# Supported values:
-# "auto" (use preference set by browser)
-# "dark" (dark background, light foreground)
-# "light" (light background, dark foreground) (default)
-colorScheme = "auto"
-# Hide the toggle button, along with the associated vertical divider
-hideColorSchemeToggle = false
-# Series see also post count
-maxSeeAlsoItems = 5
-# Enable Twemoji
-enableTwemoji = true
-# Custom CSS
-customCSS = []
-# Custom SCSS
-customSCSS = []
-# Custom JS
-customJS = []
+    author = "7.seven"
+    info1 = "Just for Fun"
+    info2 = "Learner"
+    info3 = ""
+    description = ""
+    keywords = ""
 
-# If you want to use fathom(https://usefathom.com) for analytics, add this section
-[params.fathomAnalytics]
-siteID = "ABCDE"
-# Default value is cdn.usefathom.com, overwrite this if you are self-hosting
-serverURL = "analytics.example.com"
+    #github = ""
+    #telegram = ""
+    #zhihu = ""
+    #wechat = ""
 
-# If you want to use plausible(https://plausible.io) for analytics, add this section
-[params.plausibleAnalytics]
-domain = "example.com"
-# Default value is plausible.io, overwrite this if you are self-hosting or using a custom domain
-serverURL = "analytics.example.com"
+    favicon_32 = "images/f/favicon-32x32.png"
+    favicon_16 = "images/f/favicon-16x16.png"
 
-# If you want to use goatcounter(https://goatcounter.com) for analytics, add this section
-[params.goatCounter]
-code = "code"
+    hidecredits = true
+    hidecopyright = false
 
-# If you want to use Cloudflare Web Analytics(https://cloudflare.com) for analytics, add this section
-[params.cloudflare]
-token = "token"
+    math = true
+    custom_css = ["/css/main.css"]
+    custom_js = ["/js/lazysizes.min.js", "/js/flying-pages.min.js", "/js/custom.js"]
 
-# If you want to use Matomo(https://matomo.org) for analytics, add this section
-[params.matomo]
-# Default value is "1", overwrite this if you are cloud-hosting
-siteID = "ABCDE"
-# For cloud-hosting, use provided URL, e.g. example.matomo.cloud
-serverURL = "analytics.example.com"
+    dateFormat = "2020-11-22"
+    series = true
+    rtl = false
 
-# If you want to use Google Tag Manager(https://analytics.google.com/) for analytics, add this section
-[params.googleTagManager]
-id = "gid"
+    # Specify light/dark colorscheme
+    # Supported values:
+    # "auto" (use preference set by browser)
+    # "dark" (dark background, light foreground)
+    # "light" (light background, dark foreground) (default)
+    colorscheme = "auto"
 
-# If you want to implement a Content-Security-Policy, add this section
-[params.csp]
-childsrc = ["'self'"]
-fontsrc = ["'self'", "https://fonts.gstatic.com", "https://cdn.jsdelivr.net/"]
-formaction = ["'self'"]
-framesrc = ["'self'"]
-imgsrc = ["'self'"]
-objectsrc = ["'none'"]
-stylesrc = [
-  "'self'",
-  "'unsafe-inline'",
-  "https://fonts.googleapis.com/",
-  "https://cdn.jsdelivr.net/"
-]
-scriptsrc = ["'self'", "'unsafe-inline'", "https://www.google-analytics.com"]
-prefetchsrc = ["'self'"]
+    # Series see also post count
+    maxSeeAlsoItems = 3
 
-[taxonomies]
-category = "categories"
-series = "series"
-tag = "tags"
-author = "authors"
+# Comments on github issue
+[params.utteranc]
+    repo = "JakATom/7.seven"
+    issue-term = "pathname"
+    theme = "github-light"
+
+## 开启版权声明，协议名字和链接都可以换
+[params.cc]
+    name = "知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议"
+    link = "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+
+# Social links
+[[params.social]]
+    name = "Github"
+    icon = "fab fa-github"
+    weight = 1
+    url = "https://github.com/JakATom/7.seven"
 
 [[params.social]]
-name = "Github"
-icon = "fa fa-github"
-weight = 1
-url = "https://github.com/johndoe/"
+    name = "RSS"
+    icon = "fas fa-rss"
+    weight = 2
+    url = "index.xml"
 
-[[params.social]]
-name = "Gitlab"
-icon = "fa fa-gitlab"
-weight = 2
-url = "https://gitlab.com/johndoe/"
+[menu]
+  [[menu.main]]
+    name = "Blog"
+    url = "/posts/"
+    weight = 1
 
-[[params.social]]
-name = "Twitter"
-icon = "fa fa-twitter"
-weight = 3
-url = "https://twitter.com/johndoe/"
+  [[menu.main]]
+    name = "Categories"
+    url = "/categories/"
+    weight = 2
 
-[[params.social]]
-name = "LinkedIn"
-icon = "fa fa-linkedin"
-weight = 4
-url = "https://www.linkedin.com/in/johndoe/"
+  [[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 3
 
-[[params.social]]
-name = "Medium"
-icon = "fa fa-medium"
-weight = 5
-url = "https://medium.com/@johndoe"
-
-[[params.social]]
-name = "RSS"
-icon = "fa fa-rss"
-weight = 6
-url = "https://myhugosite.com/index.xml"
-rel = "alternate"
-type = "application/rss+xml"
-
-[languages.en]
-languageName = "English"
-
-[[languages.en.menu.main]]
-name = "About"
-weight = 1
-url = "about/"
-
-[[languages.en.menu.main]]
-name = "Blog"
-weight = 2
-url = "posts/"
-
-[[languages.en.menu.main]]
-name = "Projects"
-weight = 3
-url = "https://luizdepra.dev"
-
-[[languages.en.menu.main]]
-name = "Contact me"
-weight = 5
-url = "contact/"
-
-[languages.pt-br]
-languageName = "Português"
-title = "João Ninguém"
-
-[languages.pt-br.params]
-author = "João Ninguém"
-info = "Full Stack DevOps e Mágico"
-description = "Sítio pessoal de João Ninguém"
-keywords = "blog,desenvolvedor,pessoal"
-footerContent = "Coloque algum texto aqui."
-
-[[languages.pt-br.menu.main]]
-name = "Sobre"
-weight = 1
-url = "about/"
-
-[[languages.pt-br.menu.main]]
-name = "Blog"
-weight = 2
-url = "posts/"
-
-[[languages.pt-br.menu.main]]
-name = "Projetos"
-weight = 3
-url = "https://luizdepra.dev"
-
-[[languages.pt-br.menu.main]]
-name = "Contato"
-weight = 5
-url = "contact/"
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 4
