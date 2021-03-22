@@ -115,5 +115,5 @@ FootnoteReturnLinkContents = "↑"
 
   [[menu.main]]
     name = "About"
-    url = "/about/"
+    url = "/about.md"
     weight = 4
