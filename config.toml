@@ -56,8 +56,8 @@ FootnoteReturnLinkContents = "↑"
     hidecopyright = false
 
     math = true
-    custom_css = ["/css/main.css"]
-    custom_js = ["/js/lazysizes.min.js", "/js/flying-pages.min.js", "/js/custom.js"]
+    #custom_css = ["/css/main.css"]
+    #custom_js = ["/js/lazysizes.min.js", "/js/flying-pages.min.js", "/js/custom.js"]
 
     dateFormat = "2020-11-22"
     series = true
