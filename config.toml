@@ -2,11 +2,12 @@ baseURL = "https://blog.7seven.xyz"  # <head> 里面的 baseurl 信息，填你�
 title = "小琪気的博客"     # 浏览器的标题
 theme = "hugo-coder"     # 主题 (需要自己下载)
 languagecode = "zh-cn"   # 语言
-defaultcontentlanguage = "zh-cn"
+hasCJKLanguage = true # 开启可以让「字数统计」统计汉字
 
 paginate = 9999          # 每页的文章数
 enableEmoji = true       # 支持 Emoji
 enableRobotsTXT = true   # 支持 robots.txt
+
 canonifyURLs = true      #  启用将相对URL转换为绝对URL
 googleAnalytics = ""     # Google 统计 id
 
@@ -17,17 +18,9 @@ pluralizelisttitles = false
 
 FootnoteReturnLinkContents = "↑"
 
-# 是否在文档中直接使用 HTML 标签
-[markup.goldmark.renderer]
-    unsafe= true
-
-# 用于 Hugo 输出文档的设置
-[outputs]
-  page     = ["HTML", "AMP"]
-  home     = ["HTML", "AMP"]
-  section  = ["HTML"]
-  taxonomyTerm = ["HTML"]
-  taxonomy = ["HTML"]
+# 生成的文章的路径
+[Permalinks]
+  posts = "/posts/:slug.html"
 
 # 自定义分类
 [taxonomies]
@@ -38,25 +31,14 @@ FootnoteReturnLinkContents = "↑"
 # 主页内容
 [params]
     author = "7.seven"
-    avatarurl = "images/avatar.jpg"
+    avatarurl = "images/maomi.jpg"
     subtitle = "HALO HALO" 
 
-    description = ""
-    keywords = ""
+    description = "小琪気的博客"
+    keywords = "blog, 随笔"
+    enableUtteranc = true # utteranc 评论系统
 
-    #github = ""
-    #telegram = ""
-    #zhihu = ""
-    #wechat = ""
-
-    favicon_32 = "images/f/favicon-32x32.png"
-    favicon_16 = "images/f/favicon-16x16.png"
-
-    hidecredits = true
-    hidecopyright = false
-
-    series = true
-    rtl = false
+    license= '本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可'
 
     # Specify light/dark colorscheme
     # Supported values:
@@ -65,21 +47,11 @@ FootnoteReturnLinkContents = "↑"
     # "light" (light background, dark foreground) (default)
     colorscheme = "auto"
 
-    # Series see also post count
-    #maxSeeAlsoItems = 3
-
-    #dateFormat = "2008-01-02"
-
 # Comments on github issue
 [params.utteranc]
     repo = "JakATom/7.seven"
     issue-term = "pathname"
     theme = "github-light"
-
-## 开启版权声明，协议名字和链接都可以换
-[params.cc]
-    name = "知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议"
-    link = "https://creativecommons.org/licenses/by-nc-nd/4.0/"
 
 # Social links
 [[params.social]]
@@ -87,12 +59,6 @@ FootnoteReturnLinkContents = "↑"
     icon = "fab fa-github"
     weight = 1
     url = "https://github.com/JakATom/7.seven"
-
-[[params.social]]
-    name = "RSS"
-    icon = "fas fa-rss"
-    weight = 2
-    url = "index.xml"
 
 [menu]
   [[menu.main]]
@@ -114,3 +80,6 @@ FootnoteReturnLinkContents = "↑"
     name = "About"
     url = "/about/"
     weight = 4
+
+[markup.goldmark.renderer]
+    unsafe = true
