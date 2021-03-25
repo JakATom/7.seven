@@ -54,11 +54,11 @@ FootnoteReturnLinkContents = "↑"
     theme = "github-light"
 
 # Social links
-[[params.social]]
-    name = "Github"
-    icon = ""
-    weight = 1
-    url = "https://github.com/JakATom/7.seven"
+#[[params.social]]
+#    name = "Github"
+#    icon = ""
+#    weight = 1
+#    url = "https://github.com/JakATom/7.seven"
 
 [menu]
   [[menu.main]]
