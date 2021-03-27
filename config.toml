@@ -31,7 +31,7 @@ FootnoteReturnLinkContents = "↑"
 # 主页内容
 [params]
     author = "7.seven"
-    avatarurl = "images/maomi.jpg"
+    avatarurl = "images/avatar.jpg"
     subtitle = "HALO HALO" 
 
     description = "小琪気的博客"
