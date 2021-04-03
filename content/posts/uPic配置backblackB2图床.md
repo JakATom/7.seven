@@ -17,5 +17,5 @@ draft: false
 
 配置完成后点击“验证”。如果验证成功，会在B2的桶中上传一个测试图片。
 
-![upic配置backblazeB2图床(使用amazons3接口)](https://bedimg.7seven.xyz/upic%E9%85%8D%E7%BD%AEbackblazeB2%E5%9B%BE%E5%BA%8A(%E4%BD%BF%E7%94%A8amazon+s3%E6%8E%A5%E5%8F%A3).jpg
+![upic配置backblazeB2图床(使用amazons3接口)](https://bedimg.7seven.xyz/upic%E9%85%8D%E7%BD%AEbackblazeB2%E5%9B%BE%E5%BA%8A(%E4%BD%BF%E7%94%A8amazon+s3%E6%8E%A5%E5%8F%A3).jpg)
 
