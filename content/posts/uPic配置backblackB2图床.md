@@ -1,7 +1,7 @@
 ---
 title: "UPic配置backblackB2图床"
 date: 2021-04-03T15:20:22+08:00
-draft: true
+draft: false
 ---
 
 # UPic配置backblackB2图床
